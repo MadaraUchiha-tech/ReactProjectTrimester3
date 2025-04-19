@@ -4,11 +4,11 @@
 
 @layer base {
   html {
-    @apply h-full bg-light;
+    @apply h-full bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50;
   }
   
   body {
-    @apply h-full text-dark antialiased;
+    @apply h-full text-gray-800 antialiased;
   }
 
   #root {
@@ -26,27 +26,27 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary/90 focus:ring-primary/50;
+    @apply bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 focus:ring-purple-500/50 shadow-lg hover:shadow-xl;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary/90 focus:ring-secondary/50;
+    @apply bg-gradient-to-r from-indigo-600 to-blue-600 text-white hover:from-indigo-700 hover:to-blue-700 focus:ring-indigo-500/50 shadow-lg hover:shadow-xl;
   }
   
   .card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:border-primary/20 transition-all duration-300;
+    @apply bg-white/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:border-purple-200 hover:shadow-xl transition-all duration-300;
   }
 
   .input {
-    @apply w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-primary transition-colors;
+    @apply w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition-colors bg-white/80 backdrop-blur-sm;
   }
 
   .page-container {
-    @apply min-h-screen bg-gradient-to-b from-light to-gray-50;
+    @apply min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center mb-8;
+    @apply text-3xl md:text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent;
   }
 
   .manga-grid {
@@ -54,11 +54,11 @@
   }
 
   .manga-card-image {
-    @apply w-full h-80 object-cover transition-transform duration-500 hover:scale-105;
+    @apply w-full h-80 object-cover transition-transform duration-500 hover:scale-110;
   }
 
   .manga-card-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300;
   }
 
   .manga-card-content {
@@ -66,28 +66,28 @@
   }
 
   .stats-card {
-    @apply bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-100;
+    @apply bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300;
   }
 
   .genre-tag {
-    @apply bg-primary/10 text-primary px-4 py-2 rounded-full hover:bg-primary/20 transition-colors;
+    @apply bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-4 py-2 rounded-full hover:from-purple-200 hover:to-pink-200 transition-colors shadow-sm;
   }
 
   .loading-spinner {
-    @apply animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent;
+    @apply animate-spin rounded-full h-12 w-12 border-4 border-purple-500 border-t-transparent;
   }
 
   .nav-link {
-    @apply hover:text-primary transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300;
+    @apply hover:text-purple-600 transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-gradient-to-r after:from-purple-600 after:to-pink-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300;
   }
 
   .hero-section {
-    @apply relative overflow-hidden bg-dark text-white py-20;
+    @apply relative overflow-hidden bg-gradient-to-r from-purple-900 to-pink-900 text-white py-20;
   }
 
   .hero-section::before {
     content: '';
-    @apply absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10;
+    @apply absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-20;
   }
 
   .hero-content {
@@ -99,11 +99,11 @@
   }
 
   .search-input {
-    @apply w-full p-4 pr-12 text-lg border-2 border-gray-200 rounded-lg focus:outline-none focus:border-primary transition-colors bg-white/80 backdrop-blur-sm;
+    @apply w-full p-4 pr-12 text-lg border-2 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500 transition-colors bg-white/90 backdrop-blur-sm shadow-lg;
   }
 
   .search-button {
-    @apply absolute right-2 top-1/2 transform -translate-y-1/2 p-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition-colors;
+    @apply absolute right-2 top-1/2 transform -translate-y-1/2 p-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 transition-colors shadow-lg;
   }
 }
 
@@ -131,12 +131,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary/50 rounded-full hover:bg-primary/70;
+  @apply bg-gradient-to-b from-purple-500 to-pink-500 rounded-full hover:from-purple-600 hover:to-pink-600;
 }
 
 /* Loading skeleton animation */
 .skeleton {
-  @apply relative overflow-hidden bg-gray-200 rounded-lg;
+  @apply relative overflow-hidden bg-gradient-to-r from-gray-200 to-gray-300 rounded-lg;
 }
 
 .skeleton::after {
@@ -145,8 +145,8 @@
   background-image: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.2) 20%,
-    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.6) 60%,
     rgba(255, 255, 255, 0) 100%
   );
 }
