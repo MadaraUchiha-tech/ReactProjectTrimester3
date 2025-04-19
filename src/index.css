@@ -4,15 +4,15 @@
 
 @layer base {
   html {
-    @apply h-full bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50;
+    @apply h-full bg-white dark:bg-gray-900 transition-colors duration-200;
   }
   
   body {
-    @apply h-full text-slate-700 antialiased;
+    @apply h-full text-gray-900 dark:text-white antialiased;
   }
 
   #root {
-    @apply h-full flex flex-col;
+    @apply h-full flex flex-col bg-white dark:bg-gray-900;
   }
 
   main {
@@ -34,19 +34,19 @@
   }
   
   .card {
-    @apply bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-teal-100/30 hover:border-teal-200/50 hover:shadow-2xl transition-all duration-300;
+    @apply bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300;
   }
 
   .input {
-    @apply w-full px-4 py-2 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-teal-400 transition-colors bg-white/60 backdrop-blur-sm;
+    @apply w-full px-4 py-2 border-2 border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:border-teal-400 transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-white;
   }
 
   .page-container {
-    @apply min-h-screen bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50;
+    @apply min-h-screen bg-white dark:bg-gray-900;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-center mb-8 text-slate-800;
+    @apply text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white;
   }
 
   .manga-grid {
@@ -58,7 +58,7 @@
   }
 
   .manga-card-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-800/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300;
+    @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300;
   }
 
   .manga-card-content {
@@ -66,11 +66,11 @@
   }
 
   .stats-card {
-    @apply bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-xl border border-teal-100/30 hover:shadow-2xl transition-all duration-300;
+    @apply bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-300;
   }
 
   .genre-tag {
-    @apply bg-teal-50 text-teal-700 px-4 py-2 rounded-xl hover:bg-teal-100 transition-colors shadow-sm border border-teal-200/50;
+    @apply bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 px-4 py-2 rounded-xl hover:bg-teal-100 dark:hover:bg-teal-900/50 transition-colors shadow-sm border border-teal-200/50 dark:border-teal-700/50;
   }
 
   .loading-spinner {
@@ -78,11 +78,11 @@
   }
 
   .nav-link {
-    @apply text-slate-300 hover:text-white transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-teal-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300;
+    @apply text-gray-300 hover:text-white transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-teal-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300;
   }
 
   .hero-section {
-    @apply relative overflow-hidden bg-gradient-to-r from-slate-800 to-slate-900 text-white py-24;
+    @apply relative overflow-hidden bg-gray-800 dark:bg-gray-900 text-white py-24;
   }
 
   .hero-section::before {
@@ -99,7 +99,7 @@
   }
 
   .search-input {
-    @apply w-full p-4 pr-12 text-lg border-2 border-slate-200 rounded-xl focus:outline-none focus:border-teal-400 transition-colors bg-white/70 backdrop-blur-sm shadow-xl;
+    @apply w-full p-4 pr-12 text-lg border-2 border-gray-200 dark:border-gray-700 rounded-xl focus:outline-none focus:border-teal-400 transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-white;
   }
 
   .search-button {
@@ -107,7 +107,7 @@
   }
 
   .navbar {
-    @apply bg-gradient-to-r from-slate-800 to-slate-900 text-white shadow-xl backdrop-blur-sm sticky top-0 z-50;
+    @apply bg-gray-800 dark:bg-gray-900 text-white shadow-xl backdrop-blur-sm sticky top-0 z-50;
   }
 
   .logo-text {
@@ -115,7 +115,7 @@
   }
 
   .feature-card {
-    @apply p-6 rounded-2xl bg-white/60 backdrop-blur-sm border border-teal-100/30 hover:border-teal-200/50 transition-all duration-300 hover:shadow-2xl;
+    @apply p-6 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:shadow-2xl;
   }
 
   .feature-icon {
@@ -143,7 +143,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-100;
+  @apply bg-gray-100 dark:bg-gray-800;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -152,7 +152,7 @@
 
 /* Loading skeleton animation */
 .skeleton {
-  @apply relative overflow-hidden bg-gradient-to-r from-slate-100 to-slate-200 rounded-xl;
+  @apply relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-xl;
 }
 
 .skeleton::after {

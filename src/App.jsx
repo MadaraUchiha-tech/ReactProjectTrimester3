@@ -13,17 +13,17 @@ function App() {
     <Router>
       <ThemeProvider>
         <FavoritesProvider>
-          <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+          <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
             <Navigation />
             <ThemeToggle />
-            <main className="flex-1 pt-16">
+            <div className="flex-1 bg-white dark:bg-gray-900">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/search" element={<Search />} />
                 <Route path="/manga/:id" element={<MangaDetail />} />
                 <Route path="/favorites" element={<Favorites />} />
               </Routes>
-            </main>
+            </div>
           </div>
         </FavoritesProvider>
       </ThemeProvider>
