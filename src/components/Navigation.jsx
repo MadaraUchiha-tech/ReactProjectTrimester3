@@ -18,7 +18,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-dark/95 backdrop-blur-sm shadow-lg' : 'bg-dark'
+      isScrolled ? 'bg-dark/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-dark dark:bg-gray-900'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
@@ -60,13 +60,13 @@ const Navigation = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="nav-link text-white">
+            <Link to="/" className="nav-link text-white hover:text-primary transition-colors">
               Home
             </Link>
-            <Link to="/search" className="nav-link text-white">
+            <Link to="/search" className="nav-link text-white hover:text-primary transition-colors">
               Search
             </Link>
-            <Link to="/favorites" className="nav-link text-white relative">
+            <Link to="/favorites" className="nav-link text-white hover:text-primary transition-colors relative">
               Favorites
               {favorites.length > 0 && (
                 <span className="absolute -top-2 -right-4 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
@@ -100,12 +100,12 @@ const Navigation = () => {
             </Link>
             <Link
               to="/favorites"
-              className="block text-white hover:text-primary transition-colors relative"
+              className="block text-white hover:text-primary transition-colors relative inline-block"
               onClick={() => setIsMenuOpen(false)}
             >
               Favorites
               {favorites.length > 0 && (
-                <span className="ml-2 inline-flex items-center justify-center bg-primary text-white text-xs rounded-full w-5 h-5 animate-pulse">
+                <span className="absolute -top-2 -right-4 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
                   {favorites.length}
                 </span>
               )}

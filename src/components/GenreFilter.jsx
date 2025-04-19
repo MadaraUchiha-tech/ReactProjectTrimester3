@@ -38,9 +38,9 @@ const GenreFilter = ({ selectedGenres, onGenreSelect }) => {
     <div className="mb-8">
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="text-xl font-semibold">Filter by Genres</h3>
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Filter by Genres</h3>
           {selectedGenres.length > 0 && (
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               {selectedGenres.length} {selectedGenres.length === 1 ? 'genre' : 'genres'} selected
             </p>
           )}
@@ -78,7 +78,7 @@ const GenreFilter = ({ selectedGenres, onGenreSelect }) => {
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
               selectedGenres.includes(genre.mal_id)
                 ? 'bg-primary text-white hover:bg-primary/90'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600'
             }`}
           >
             {genre.name}
