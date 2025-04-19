@@ -54,16 +54,32 @@
   }
 
   .manga-card-image {
-    @apply w-full h-80 object-cover transition-all duration-500 hover:scale-105 rounded-t-2xl;
+    @apply w-full h-80 object-cover transition-all duration-500 
+           hover:scale-105 rounded-t-xl
+           border-b-2 border-slate-100/50;
   }
 
   .manga-card {
-    @apply relative bg-white rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.08)] 
+    @apply relative bg-white rounded-2xl 
+           shadow-[0_10px_20px_rgba(0,0,0,0.08)] 
            hover:shadow-[0_20px_30px_rgba(0,0,0,0.12)] 
            transition-all duration-300 
-           border-2 border-slate-100
-           hover:border-teal-200
-           transform hover:-translate-y-1;
+           border-[3px] border-slate-200/80
+           hover:border-teal-300
+           transform hover:-translate-y-1
+           overflow-hidden;
+  }
+
+  .manga-card::before {
+    content: '';
+    @apply absolute inset-0 border-[1px] border-white/50 rounded-2xl z-10 pointer-events-none;
+  }
+
+  .manga-card::after {
+    content: '';
+    @apply absolute inset-0 
+           bg-gradient-to-br from-white/20 to-transparent 
+           opacity-50 pointer-events-none;
   }
 
   .manga-card-overlay {
