@@ -30,10 +30,10 @@ const Search = () => {
   };
 
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto mb-12">
-          <h1 className="text-4xl font-bold mb-6 text-center">Search Manga</h1>
+          <h1 className="text-4xl font-bold mb-6 text-center text-gray-900 dark:text-white">Search Manga</h1>
           <form onSubmit={handleSearch} className="relative">
             <div className="relative">
               <input
@@ -41,7 +41,7 @@ const Search = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search for manga..."
-                className="w-full p-4 pr-12 text-lg border-2 border-gray-200 rounded-lg focus:outline-none focus:border-primary transition-colors"
+                className="w-full p-4 pr-12 text-lg border-2 border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:border-primary transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
               />
               <button
                 type="submit"
@@ -79,7 +79,7 @@ const Search = () => {
               <Link
                 key={manga.mal_id}
                 to={`/manga/${manga.mal_id}`}
-                className="card hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                className="card bg-white dark:bg-gray-800 hover:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-900/30 transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="relative">
                   <img
@@ -94,17 +94,17 @@ const Search = () => {
                 <div className="p-4">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-primary font-semibold">Score: {manga.score}</span>
-                    <span className="text-gray-500">•</span>
-                    <span className="text-gray-600">{manga.status}</span>
+                    <span className="text-gray-500 dark:text-gray-400">•</span>
+                    <span className="text-gray-600 dark:text-gray-300">{manga.status}</span>
                   </div>
-                  <p className="text-gray-600 line-clamp-2">{manga.synopsis}</p>
+                  <p className="text-gray-600 dark:text-gray-300 line-clamp-2">{manga.synopsis}</p>
                 </div>
               </Link>
             ))}
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
               {query ? 'No results found. Try a different search term.' : 'Enter a search term to find manga.'}
             </p>
           </div>
