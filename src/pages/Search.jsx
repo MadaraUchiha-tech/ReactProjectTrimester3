@@ -1,0 +1,117 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { searchManga } from '../services/mangaService';
+
+const Search = () => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    
+    if (!query.trim()) {
+      setError('Please enter a search term');
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+
+    try {
+      const manga = await searchManga(query);
+      setResults(manga);
+    } catch (err) {
+      setError('An error occurred while searching');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen py-8">
+      <div className="container mx-auto px-4">
+        <div className="max-w-2xl mx-auto mb-12">
+          <h1 className="text-4xl font-bold mb-6 text-center">Search Manga</h1>
+          <form onSubmit={handleSearch} className="relative">
+            <div className="relative">
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search for manga..."
+                className="w-full p-4 pr-12 text-lg border-2 border-gray-200 rounded-lg focus:outline-none focus:border-primary transition-colors"
+              />
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-lg hover:bg-primary/90 transition-colors"
+                disabled={loading}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+            {error && (
+              <p className="text-red-500 mt-2 text-center">{error}</p>
+            )}
+          </form>
+        </div>
+
+        {loading ? (
+          <div className="flex justify-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+          </div>
+        ) : results.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {results.map((manga) => (
+              <Link
+                key={manga.mal_id}
+                to={`/manga/${manga.mal_id}`}
+                className="card hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="relative">
+                  <img
+                    src={manga.images.jpg.image_url}
+                    alt={manga.title}
+                    className="w-full h-80 object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                    <h3 className="text-white text-xl font-bold">{manga.title}</h3>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-primary font-semibold">Score: {manga.score}</span>
+                    <span className="text-gray-500">•</span>
+                    <span className="text-gray-600">{manga.status}</span>
+                  </div>
+                  <p className="text-gray-600 line-clamp-2">{manga.synopsis}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-gray-600 text-lg">
+              {query ? 'No results found. Try a different search term.' : 'Enter a search term to find manga.'}
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Search; 
