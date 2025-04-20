@@ -22,6 +22,9 @@ const Search = () => {
     try {
       const manga = await searchManga(query);
       setResults(manga);
+      if (manga.length === 0) {
+        setError('No results found. Adult content is filtered out by default.');
+      }
     } catch (err) {
       setError('An error occurred while searching');
     } finally {
@@ -104,9 +107,16 @@ const Search = () => {
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-gray-600 dark:text-gray-400 text-lg">
-              {query ? 'No results found. Try a different search term.' : 'Enter a search term to find manga.'}
+            <p className="text-gray-600 dark:text-gray-400 text-lg mb-2">
+              {query 
+                ? 'No results found. Adult content is filtered out by default.' 
+                : 'Enter a search term to find manga.'}
             </p>
+            {query && (
+              <p className="text-gray-500 dark:text-gray-500 text-md">
+                Try a different search term.
+              </p>
+            )}
           </div>
         )}
       </div>

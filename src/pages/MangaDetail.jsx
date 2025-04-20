@@ -8,22 +8,30 @@ const MangaDetail = () => {
   const navigate = useNavigate();
   const [manga, setManga] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
 
   useEffect(() => {
     const fetchMangaDetails = async () => {
       try {
         const data = await getMangaDetails(id);
-        setManga(data);
+        if (!data) {
+          setError('This content is not available due to content restrictions.');
+          // Auto-redirect after 3 seconds
+          setTimeout(() => navigate('/'), 3000);
+        } else {
+          setManga(data);
+        }
       } catch (error) {
         console.error('Error fetching manga details:', error);
+        setError('Error loading manga details.');
       } finally {
         setLoading(false);
       }
     };
 
     fetchMangaDetails();
-  }, [id]);
+  }, [id, navigate]);
 
   const handleFavoriteToggle = () => {
     if (isFavorite(manga.mal_id)) {
@@ -37,6 +45,21 @@ const MangaDetail = () => {
     return (
       <div className="flex justify-center items-center min-h-[calc(100vh-4rem)] bg-white dark:bg-gray-900 pt-16">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] bg-white dark:bg-gray-900 px-4 pt-16">
+        <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{error}</h1>
+        <p className="text-gray-600 dark:text-gray-400 mb-4">Redirecting to home page...</p>
+        <button
+          onClick={() => navigate('/')}
+          className="btn btn-primary"
+        >
+          Go back home
+        </button>
       </div>
     );
   }

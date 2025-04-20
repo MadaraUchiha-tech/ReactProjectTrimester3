@@ -37,6 +37,10 @@ const Home = () => {
       setDisplayedManga(manga.slice(0, ITEMS_PER_PAGE));
       setHasMore(manga.length > ITEMS_PER_PAGE);
       setPage(1);
+      
+      if (manga.length === 0) {
+        setError('No manga found with the selected filters. Adult content has been filtered out.');
+      }
     } catch (error) {
       console.error('Error fetching manga:', error);
       setError('Failed to load manga. Please try again later.');
