@@ -5,12 +5,12 @@ A modern, responsive web application built with React that allows users to explo
 ## Screenshots
 
 ### Home Page & Search
-![Home Page with Search](src/assets/screenshots/home-search.png)
+![Home Page with Search](src/assets/screenshots/home.png)
 
 *Home page featuring the search interface and manga grid layout*
 
 ### Manga Details
-![Manga Details](src/assets/screenshots/manga-details.png)
+![Manga Details](src/assets/screenshots/mangadetail.png)
 
 *Detailed view of a manga showing comprehensive information*
 
@@ -20,17 +20,17 @@ A modern, responsive web application built with React that allows users to explo
 *Dark mode interface for comfortable viewing*
 
 ### Search Results
-![Search Results](src/assets/screenshots/search-results.png)
+![Search Results](src/assets/screenshots/searchfilter.png)
 
 *Search results with filtering options*
 
 ### Favorites Management
-![Favorites Page](src/assets/screenshots/favorites-page.png)
+![Favorites Page](src/assets/screenshots/favorites.png)
 
 *Favorites page showing saved manga*
 
 ### Genre Filtering
-![Genre Filtering](src/assets/screenshots/genre-filtering.png)
+![Genre Filtering](src/assets/screenshots/mangas.png)
 
 *Genre filtering interface for refined searching*
 
