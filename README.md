@@ -2,6 +2,10 @@
 
 A modern, responsive web application built with React that allows users to explore, search, and manage their favorite manga titles. The application integrates with the MyAnimeList API to provide comprehensive manga information and features a sleek dark mode interface.
 
+## Live Demo
+
+🌐 [View Live Demo](https://my-mangaworld.netlify.app)
+
 ## Screenshots
 
 ### Home Page & Search
