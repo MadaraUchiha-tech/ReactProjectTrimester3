@@ -94,7 +94,7 @@ ReactProjectTrimester3/
 │   │   │   ├── search-results.png        # Search results with filters
 │   │   │   ├── favorites-page.png        # Favorites management page
 │   │   │   └── genre-filtering.png       # Genre filter interface
-│   │   └── react.svg          # React logo asset
+│   │   └── unnamed.webp          # FavIcon asset
 │   ├── App.jsx                # Main application component
 │   └── index.css              # Global styles and Tailwind configuration
 ├── public/                    # Public assets
