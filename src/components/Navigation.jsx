@@ -8,7 +8,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
-       'bg-dark/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-lg' 
+       bg-dark dark:bg-gray-900
      `}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
