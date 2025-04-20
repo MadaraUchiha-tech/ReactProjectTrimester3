@@ -112,11 +112,6 @@ const Search = () => {
                 ? 'Please enter the thing you want to search and then press enter' 
                 : 'Please enter the thing you want to search and then press enter'}
             </p>
-            {query && (
-              <p className="text-gray-500 dark:text-gray-500 text-md">
-                Try a different search term.
-              </p>
-            )}
           </div>
         )}
       </div>
