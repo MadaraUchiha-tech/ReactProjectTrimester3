@@ -15,7 +15,7 @@ A modern, responsive web application built with React that allows users to explo
 *Detailed view of a manga showing comprehensive information*
 
 ### Dark Mode Interface
-![Dark Mode](src/assets/screenshots/dark-mode.png)
+![Dark Mode](src/assets/screenshots/dark_mode.png)
 
 *Dark mode interface for comfortable viewing*
 
@@ -25,7 +25,7 @@ A modern, responsive web application built with React that allows users to explo
 *Search results with filtering options*
 
 ### Favorites Management
-![Favorites Page](src/assets/screenshots/favorites.png)
+![Favorites Page](src/assets/screenshots/favourites.png)
 
 *Favorites page showing saved manga*
 
