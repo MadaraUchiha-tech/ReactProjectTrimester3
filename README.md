@@ -5,32 +5,32 @@ A modern, responsive web application built with React that allows users to explo
 ## Screenshots
 
 ### Home Page & Search
-![Home Page with Search](src/assets/screenshots/Screenshot%202025-04-20%20at%209.08.25%20AM.png)
+![Home Page with Search](src/assets/screenshots/home-search.png)
 
 *Home page featuring the search interface and manga grid layout*
 
 ### Manga Details
-![Manga Details](src/assets/screenshots/Screenshot%202025-04-20%20at%209.08.30%20AM.png)
+![Manga Details](src/assets/screenshots/manga-details.png)
 
 *Detailed view of a manga showing comprehensive information*
 
 ### Dark Mode Interface
-![Dark Mode](src/assets/screenshots/Screenshot%202025-04-20%20at%209.08.41%20AM.png)
+![Dark Mode](src/assets/screenshots/dark-mode.png)
 
 *Dark mode interface for comfortable viewing*
 
 ### Search Results
-![Search Results](src/assets/screenshots/Screenshot%202025-04-20%20at%209.09.14%20AM.png)
+![Search Results](src/assets/screenshots/search-results.png)
 
 *Search results with filtering options*
 
 ### Favorites Management
-![Favorites Page](src/assets/screenshots/Screenshot%202025-04-20%20at%209.11.50%20AM.png)
+![Favorites Page](src/assets/screenshots/favorites-page.png)
 
 *Favorites page showing saved manga*
 
 ### Genre Filtering
-![Genre Filtering](src/assets/screenshots/Screenshot%202025-04-20%20at%209.11.56%20AM.png)
+![Genre Filtering](src/assets/screenshots/genre-filtering.png)
 
 *Genre filtering interface for refined searching*
 
@@ -86,6 +86,15 @@ ReactProjectTrimester3/
 │   │   ├── Search.jsx         # Search page
 │   │   ├── MangaDetail.jsx    # Detailed manga view
 │   │   └── Favorites.jsx      # Favorites management page
+│   ├── assets/
+│   │   ├── screenshots/       # Application screenshots
+│   │   │   ├── home-search.png           # Home page with search interface
+│   │   │   ├── manga-details.png         # Detailed manga information view
+│   │   │   ├── dark-mode.png             # Dark mode interface showcase
+│   │   │   ├── search-results.png        # Search results with filters
+│   │   │   ├── favorites-page.png        # Favorites management page
+│   │   │   └── genre-filtering.png       # Genre filter interface
+│   │   └── react.svg          # React logo asset
 │   ├── App.jsx                # Main application component
 │   └── index.css              # Global styles and Tailwind configuration
 ├── public/                    # Public assets
