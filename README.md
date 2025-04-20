@@ -88,12 +88,12 @@ ReactProjectTrimester3/
 │   │   └── Favorites.jsx      # Favorites management page
 │   ├── assets/
 │   │   ├── screenshots/       # Application screenshots
-│   │   │   ├── home-search.png           # Home page with search interface
-│   │   │   ├── manga-details.png         # Detailed manga information view
+│   │   │   ├── home.png           # Home page with search interface
+│   │   │   ├── mangadetail.png         # Detailed manga information view
 │   │   │   ├── dark-mode.png             # Dark mode interface showcase
-│   │   │   ├── search-results.png        # Search results with filters
-│   │   │   ├── favorites-page.png        # Favorites management page
-│   │   │   └── genre-filtering.png       # Genre filter interface
+│   │   │   ├── searchfilter.png        # Search results with filters
+│   │   │   ├── favorites.png        # Favorites management page
+│   │   │   └── mangas.png       # Genre filter interface
 │   │   └── unnamed.webp          # FavIcon asset
 │   ├── App.jsx                # Main application component
 │   └── index.css              # Global styles and Tailwind configuration
