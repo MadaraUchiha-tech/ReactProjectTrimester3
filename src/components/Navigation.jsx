@@ -1,25 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useFavorites } from '../context/FavoritesContext';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const Navigation = () => {
   const { favorites } = useFavorites();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-dark/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-dark dark:bg-gray-900'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
+       'bg-dark/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-lg' 
+     `}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link 
