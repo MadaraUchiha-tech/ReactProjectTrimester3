@@ -109,8 +109,8 @@ const Search = () => {
           <div className="text-center py-12">
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-2">
               {query 
-                ? 'No results found. Adult content is filtered out by default.' 
-                : 'Enter a search term to find manga.'}
+                ? 'Please enter the thing you want to search and then press enter' 
+                : 'Please enter the thing you want to search and then press enter'}
             </p>
             {query && (
               <p className="text-gray-500 dark:text-gray-500 text-md">
