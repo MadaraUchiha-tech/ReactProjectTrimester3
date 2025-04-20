@@ -6,11 +6,11 @@ const Favorites = () => {
 
   if (favorites.length === 0) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 pt-16">
         <div className="text-center">
           <div className="mb-8">
             <svg
-              className="w-24 h-24 mx-auto text-gray-400"
+              className="w-24 h-24 mx-auto text-gray-400 dark:text-gray-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -23,8 +23,8 @@ const Favorites = () => {
               />
             </svg>
           </div>
-          <h1 className="text-4xl font-bold mb-4">No Favorites Yet</h1>
-          <p className="text-gray-600 mb-8 max-w-md mx-auto">
+          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">No Favorites Yet</h1>
+          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-md mx-auto">
             You haven't added any manga to your favorites yet. Start exploring and add your favorite manga to this list!
           </p>
           <Link
@@ -52,12 +52,12 @@ const Favorites = () => {
   }
 
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 bg-white dark:bg-gray-900 pt-16 mt-8">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Your Favorites</h1>
+        <h1 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">Your Favorites</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {favorites.map((manga) => (
-            <div key={manga.mal_id} className="card hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div key={manga.mal_id} className="card bg-white dark:bg-gray-800 hover:shadow-xl dark:hover:shadow-2xl dark:shadow-gray-900/30 transition-all duration-300 transform hover:-translate-y-1">
               <Link to={`/manga/${manga.mal_id}`}>
                 <div className="relative">
                   <img
@@ -72,13 +72,13 @@ const Favorites = () => {
                 <div className="p-4">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-primary font-semibold">Score: {manga.score}</span>
-                    <span className="text-gray-500">•</span>
-                    <span className="text-gray-600">{manga.status}</span>
+                    <span className="text-gray-500 dark:text-gray-400">•</span>
+                    <span className="text-gray-600 dark:text-gray-300">{manga.status}</span>
                   </div>
-                  <p className="text-gray-600 line-clamp-2">{manga.synopsis}</p>
+                  <p className="text-gray-600 dark:text-gray-300 line-clamp-2">{manga.synopsis}</p>
                 </div>
               </Link>
-              <div className="p-4 border-t">
+              <div className="p-4 border-t border-gray-200 dark:border-gray-700">
                 <button
                   onClick={() => removeFavorite(manga.mal_id)}
                   className="btn btn-secondary w-full flex items-center justify-center gap-2"
