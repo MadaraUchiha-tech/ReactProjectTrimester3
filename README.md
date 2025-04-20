@@ -5,32 +5,32 @@ A modern, responsive web application built with React that allows users to explo
 ## Screenshots
 
 ### Home Page & Search
-![Home Page with Search](./src/assets/screenshots/Screenshot%202025-04-20%20at%209.08.25%20AM.png)
+![Home Page with Search](src/assets/screenshots/Screenshot%202025-04-20%20at%209.08.25%20AM.png)
 
 *Home page featuring the search interface and manga grid layout*
 
 ### Manga Details
-![Manga Details](./src/assets/screenshots/Screenshot%202025-04-20%20at%209.08.30%20AM.png)
+![Manga Details](src/assets/screenshots/Screenshot%202025-04-20%20at%209.08.30%20AM.png)
 
 *Detailed view of a manga showing comprehensive information*
 
 ### Dark Mode Interface
-![Dark Mode](./src/assets/screenshots/Screenshot%202025-04-20%20at%209.08.41%20AM.png)
+![Dark Mode](src/assets/screenshots/Screenshot%202025-04-20%20at%209.08.41%20AM.png)
 
 *Dark mode interface for comfortable viewing*
 
 ### Search Results
-![Search Results](./src/assets/screenshots/Screenshot%202025-04-20%20at%209.09.14%20AM.png)
+![Search Results](src/assets/screenshots/Screenshot%202025-04-20%20at%209.09.14%20AM.png)
 
 *Search results with filtering options*
 
 ### Favorites Management
-![Favorites Page](./src/assets/screenshots/Screenshot%202025-04-20%20at%209.11.50%20AM.png)
+![Favorites Page](src/assets/screenshots/Screenshot%202025-04-20%20at%209.11.50%20AM.png)
 
 *Favorites page showing saved manga*
 
 ### Genre Filtering
-![Genre Filtering](./src/assets/screenshots/Screenshot%202025-04-20%20at%209.11.56%20AM.png)
+![Genre Filtering](src/assets/screenshots/Screenshot%202025-04-20%20at%209.11.56%20AM.png)
 
 *Genre filtering interface for refined searching*
 
