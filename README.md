@@ -4,7 +4,9 @@ A modern, responsive web application built with React that allows users to explo
 
 ## Live Demo
 
-🌐 [View Live Demo](https://my-mangaworld.netlify.app)
+The application is deployed on Netlify for easy access and testing:
+
+🌐 [Manga Explorer - Live on Netlify](https://my-mangaworld.netlify.app)
 
 ## Screenshots
 
