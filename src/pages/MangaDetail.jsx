@@ -91,7 +91,7 @@ const MangaDetail = () => {
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-white dark:bg-gray-900 py-8 pt-16">
       <div className="container mx-auto px-4">
-        {/* Mobile view - stack vertically */}
+        {/* Mobile view */}
         {isMobile ? (
           <div className="flex flex-col gap-6">
             <div className="bg-white dark:bg-gray-900 rounded-lg p-2">
