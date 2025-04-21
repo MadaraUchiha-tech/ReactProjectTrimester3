@@ -108,9 +108,7 @@ const Search = () => {
         ) : (
           <div className="text-center py-12">
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-2">
-              {query 
-                ? 'Please enter the thing you want to search and then press enter' 
-                : 'Please enter the thing you want to search and then press enter'}
+                 'Please enter the thing you want to search and then press enter' 
             </p>
           </div>
         )}
